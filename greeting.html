@@ -11,17 +11,28 @@
     <script type="text/babel">
        
     class Greeting extends React.Component {
-       	render() {
-       		return (
-       			<div>
-       				<h1>Hello World!</h1>
-       			</div>
-       		);
-       }
+      render() {
+       	return (
+       		<div>
+       			<h1>Hello World!</h1>
+       		</div>
+       	);
+      }
    	}
 
+    class Hello extends React.Component {
+      render() {
+        return (
+          <div>
+            <h3> Hi {this.props.name}</h3>
+          </div>
+        );
+      }
+    }
+
    	ReactDOM.render(
-   		<Greeting />, document.getElementById('app')
+   		<Hello name="Matt" />, document.getElementById('app')
+      
    	);
 
     </script>
